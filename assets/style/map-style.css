@@ -1,6 +1,13 @@
 #map{
     height: 100%;
-    background-clip: grey;
+    background-clip: black;
+}
+.gm-style .gm-style-iw {
+    font-weight: 300;
+    font-size: 13px;
+    overflow: hidden;
+     color:  #081B19;
+    
 }
 
  html,
@@ -8,18 +15,26 @@
       height: 100%;
       margin: 0;
       padding: 0;
+      background-color: #081B19;
     }
 
  #panel {
       height: 100%;
-      width: null;
-      background-color: salmon;
-      position: fixed;
+    
+      background-color: #081B19;
+      position: absolute;
       z-index: 1;
       overflow-x: hidden;
       transition: all .2s ease-out;
+      width:25%;
     }
-
+@media only screen and (max-width: 768px){
+    #panel {
+      height: auto;
+      width:fit-content;
+      
+    }
+}
 .open {
       width: 250px;
     }
@@ -36,13 +51,16 @@
       font-family: 'open sans', arial, sans-serif;
       padding-left: 18px;
       padding-right: 18px;
+      color:  #E3B579;
     }
 
     .details {
-      color: darkslategrey;
+     color:  #E3B579;
     }
 
     a {
       text-decoration: none;
       color: cadetblue;
     }
+
+   

@@ -21,7 +21,7 @@ let pos;
           };
           map = new google.maps.Map(document.getElementById('map'), {
             center: pos,
-            zoom: 15
+            zoom: 10
           });
           bounds.extend(pos);
 
@@ -33,6 +33,7 @@ let pos;
         restaurants(pos);
         parks(pos);
         museums(pos);
+        bar(pos);
          }, () => {
              handleLocationError(true, infoWindow);
         });
@@ -59,12 +60,13 @@ let pos;
         restaurants(pos);
         parks(pos);
         museums(pos);
+        bar(pos);
     }
 
      function cafes(position) {
       let request = {
         location: position,
-        radius: 3000,
+        radius: 2000,
         type: 'cafe',
         keyword: 'child-friendly'
       };
@@ -76,19 +78,29 @@ let pos;
     function restaurants(position) {
       let request = {
         location: position,
-       radius: 3000,
-        type: 'restaurants',
+       radius: 2000,
+        type: 'restaurant',
         keyword: 'child-friendly'
       };
 
       service = new google.maps.places.PlacesService(map);
       service.nearbySearch(request, nearbyCallback);
     }
+ function bar(position) {
+      let request = {
+        location: position,
+       radius: 2000,
+        type: 'bar',
+        keyword: 'child-friendly'
+      };
 
+      service = new google.maps.places.PlacesService(map);
+      service.nearbySearch(request, nearbyCallback);
+    }
         function museums(position) {
       let request = {
         location: position,
-        radius: 3000,
+        radius: 2000,
         type: 'museum',
         keyword: 'child-friendly'
       };
@@ -99,7 +111,7 @@ let pos;
      function parks(position) {
       let request = {
         location: position,
-        radius: 3000,
+        radius: 2000,
         type: 'park',
         keyword: 'child-friendly'
       };
@@ -121,7 +133,8 @@ let pos;
           position: place.geometry.location,
           map: map,
           title: place.name,
-        
+          animation: google.maps.Animation.DROP,
+         icon :'assets/images/icons8-child-safe-zone-50.png'
         });
         google.maps.event.addListener(marker, 'click', () => {
           let request = {
@@ -140,3 +153,59 @@ let pos;
 
        map.fitBounds(bounds);
     }
+    function showDetails(placeResult, marker, status) {
+      if (status == google.maps.places.PlacesServiceStatus.OK) {
+        let placeInfowindow = new google.maps.InfoWindow();
+        let rating = "None";
+        if (placeResult.rating) rating = placeResult.rating;
+        placeInfowindow.setContent('<div><strong>' + placeResult.name +
+          '</strong><br>' + 'Rating: ' + rating + '</div>');
+        placeInfowindow.open(marker.map, marker);
+        currentInfoWindow.close();
+        currentInfoWindow = placeInfowindow;
+        showPanel(placeResult);
+      } else {
+        console.log('showDetails failed: ' + status);
+      }
+    }
+
+       function showPanel(placeResult) {
+            if (infoPane.classList.contains("open")) {
+        infoPane.classList.remove("open");
+      }
+       while (infoPane.lastChild) {
+        infoPane.removeChild(infoPane.lastChild);
+      }
+      if (placeResult.photos) {
+        let firstPhoto = placeResult.photos[0];
+        let photo = document.createElement('img');
+        photo.classList.add('hero');
+        photo.src = firstPhoto.getUrl();
+        infoPane.appendChild(photo);
+      }
+       let name = document.createElement('h1');
+      name.classList.add('place');
+      name.textContent = placeResult.name;
+      infoPane.appendChild(name);
+      if (placeResult.rating) {
+        let rating = document.createElement('p');
+        rating.classList.add('details');
+        rating.textContent = `Rating: ${placeResult.rating} \u272e`;
+        infoPane.appendChild(rating);
+      }
+      let address = document.createElement('p');
+      address.classList.add('details');
+      address.textContent = placeResult.formatted_address;
+      infoPane.appendChild(address);
+      if (placeResult.website) {
+        let websitePara = document.createElement('p');
+        let websiteLink = document.createElement('a');
+        let websiteUrl = document.createTextNode(placeResult.website);
+        websiteLink.appendChild(websiteUrl);
+        websiteLink.title = placeResult.website;
+        websiteLink.href = placeResult.website;
+        websitePara.appendChild(websiteLink);
+        infoPane.appendChild(websitePara);
+      }
+       infoPane.classList.add("open");
+    }   
