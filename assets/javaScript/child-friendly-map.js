@@ -1,3 +1,5 @@
+/*----these are the variables that will be used to call the map and get the user location and also show a info window---*/
+
 let pos;
     let map;
      let bounds;
@@ -5,14 +7,14 @@ let pos;
     let currentInfoWindow;
     let service;
     let infoPane;
-    
+    /*----function to call the map from the api ---*/ 
     function initMap() {
        bounds = new google.maps.LatLngBounds();
       infoWindow = new google.maps.InfoWindow;
       currentInfoWindow = infoWindow;
-
+  /*----this adds a sidebar---*/
       infoPane = document.getElementById('panel');
-
+  /*----this will get the users location and zoom in---*/
        if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
           pos = {
@@ -26,9 +28,11 @@ let pos;
           bounds.extend(pos);
 
           infoWindow.setPosition(pos);
+          /*---this tells the user where they are on the map--*/
           infoWindow.setContent('Location found.');
           infoWindow.open(map);
           map.setCenter(pos);
+            /*----these are listeners for my place search functions---*/
             cafes(pos);
         restaurants(pos);
         parks(pos);
@@ -43,25 +47,29 @@ let pos;
 }
 
          function handleLocationError(browserHasGeolocation, infoWindow) {
-              pos = {lat: -33.856, lng: 151.215};
+              /*---this sets the default location to manchetser if the user doesnt allow location--*/
+              pos = {lat: 53.4808, lng: 2.2426};
       map = new google.maps.Map(document.getElementById('map'), {
         center: pos,
         zoom: 15
       });
-
+ /*---if the user doesnt allow location this message will be displayed on the map--*/
       infoWindow.setPosition(pos);
       infoWindow.setContent(browserHasGeolocation ?
         'Geolocation permissions denied. Using default location.' :
         'Error: Your browser doesn\'t support geolocation.');
       infoWindow.open(map);
       currentInfoWindow = infoWindow;
-    
+     /*----these are listeners for my place search functions---*/
        cafes(pos);
         restaurants(pos);
         parks(pos);
         museums(pos);
         bar(pos);
     }
+     /*-- my place search functions, google only allows one type of place to be searched at one time , and will
+        only search the last type ie 'cafe,pub,park' only park will be searched , so i got around this by creating mutiple 
+        functions that search different type of places---*/
 
      function cafes(position) {
       let request = {
@@ -119,13 +127,15 @@ let pos;
       service = new google.maps.places.PlacesService(map);
       service.nearbySearch(request, nearbyCallback);
     }
+    /*--- this means if the place service is ok then create a marker for the results---*/
 
     function nearbyCallback(results, status) {
       if (status == google.maps.places.PlacesServiceStatus.OK) {
         createMarkers(results);
       }
     }
-    
+     /*--- this is the function to create a marker which i have added a animation to drop which makes the marker drop
+        onto the map when the page is loaded, i have also added my own custom marker (see README.md)--*/
 
     function createMarkers(places) {
       places.forEach(place => {
@@ -136,6 +146,7 @@ let pos;
           animation: google.maps.Animation.DROP,
          icon :'assets/images/icons8-child-safe-zone-50.png'
         });
+         /*---this is listener for when the user clicks on the marker it will show the relevant info---*/
         google.maps.event.addListener(marker, 'click', () => {
           let request = {
             placeId: place.place_id,
@@ -153,6 +164,7 @@ let pos;
 
        map.fitBounds(bounds);
     }
+     /*--this is the function that will create the information ---*/
     function showDetails(placeResult, marker, status) {
       if (status == google.maps.places.PlacesServiceStatus.OK) {
         let placeInfowindow = new google.maps.InfoWindow();
@@ -168,7 +180,7 @@ let pos;
         console.log('showDetails failed: ' + status);
       }
     }
-
+    /*-this creates the elements for the information to be pushed into--*/
        function showPanel(placeResult) {
             if (infoPane.classList.contains("open")) {
         infoPane.classList.remove("open");

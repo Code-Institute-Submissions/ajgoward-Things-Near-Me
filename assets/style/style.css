@@ -1,3 +1,5 @@
+/*----------------These are the navbar styles_-------*/
+
 .navbar{
     font-size: 30px;
     background-color: #081B19;
@@ -17,9 +19,10 @@
 .navbar-light .navbar-brand {
     color: #E3B579 !important;
 }
-.navbar-light .navbar-toggler-icon{
-   background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%227,181,121%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
-}
+
+/*----------------These are the image styles note i have changed the image style 
+                   on media screens less than 768px
+-------*/
 
 .full-image {
     height:400px;
@@ -37,9 +40,8 @@
 
   
 }
-.colors{
-    color: red;
-}
+
+/*----------------These are the footer styles_-------*/
 
 footer {
     background-color: black;
@@ -54,6 +56,8 @@ footer {
      text-align: center;
      padding: 20px;
 }
+
+/*----------------These are the index.html styles-------*/
 
 .header {
     text-align: center;
@@ -103,6 +107,8 @@ h4 {
     padding-top: 250px;
     font-size: 50px;
 }
+
+/*----------------Note i have changed the styles of elements to make the page more apealing to phone users-------*/
 @media only screen and (max-width: 768px) {
     h4 {
         padding-top: 20px;
