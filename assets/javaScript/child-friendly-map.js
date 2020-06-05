@@ -64,9 +64,9 @@ let pos;
      function cafes(position) {
       let request = {
         location: position,
-        rankBy: google.maps.places.RankBy.DISTANCE,
+        radius: 3000,
         type: 'cafe',
-        keyword: ''
+        keyword: 'child-friendly'
       };
 
       service = new google.maps.places.PlacesService(map);
@@ -76,9 +76,9 @@ let pos;
     function restaurants(position) {
       let request = {
         location: position,
-        rankBy: google.maps.places.RankBy.DISTANCE,
+       radius: 3000,
         type: 'restaurants',
-        keyword: 'dog-friendly'
+        keyword: 'child-friendly'
       };
 
       service = new google.maps.places.PlacesService(map);
@@ -88,9 +88,9 @@ let pos;
         function museums(position) {
       let request = {
         location: position,
-        rankBy: google.maps.places.RankBy.DISTANCE,
+        radius: 3000,
         type: 'museum',
-        keyword: ''
+        keyword: 'child-friendly'
       };
 
       service = new google.maps.places.PlacesService(map);
@@ -99,9 +99,9 @@ let pos;
      function parks(position) {
       let request = {
         location: position,
-        rankBy: google.maps.places.RankBy.DISTANCE,
+        radius: 3000,
         type: 'park',
-        keyword: 'dog-friendly'
+        keyword: 'child-friendly'
       };
 
       service = new google.maps.places.PlacesService(map);
@@ -138,5 +138,5 @@ let pos;
          bounds.extend(place.geometry.location);
       });
 
-       map.fitBounds(srictbounds);
+       map.fitBounds(bounds);
     }
