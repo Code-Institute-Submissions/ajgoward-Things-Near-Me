@@ -134,7 +134,7 @@ let pos;
           map: map,
           title: place.name,
           animation: google.maps.Animation.DROP,
-         icon :'assets/images/icons8-dog-bone-100.png'
+         icon :'assets/images/icons8-doge-80 (3).png'
         });
         google.maps.event.addListener(marker, 'click', () => {
           let request = {

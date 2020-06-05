@@ -15,7 +15,10 @@
     
 }
 .navbar-light .navbar-brand {
-    color: #E3B579;
+    color: #E3B579 !important;
+}
+.navbar-light .navbar-toggler-icon{
+   background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%227,181,121%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
 }
 
 .full-image {
@@ -33,6 +36,9 @@
   }
 
   
+}
+.colors{
+    color: red;
 }
 
 footer {
