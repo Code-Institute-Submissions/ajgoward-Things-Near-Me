@@ -29,7 +29,10 @@ let pos;
           infoWindow.setContent('Location found.');
           infoWindow.open(map);
           map.setCenter(pos);
-          
+            cafes(pos);
+        restaurants(pos);
+        parks(pos);
+        museums(pos);
          }, () => {
              handleLocationError(true, infoWindow);
         });
@@ -52,4 +55,88 @@ let pos;
       infoWindow.open(map);
       currentInfoWindow = infoWindow;
     
+       cafes(pos);
+        restaurants(pos);
+        parks(pos);
+        museums(pos);
+    }
+
+     function cafes(position) {
+      let request = {
+        location: position,
+        rankBy: google.maps.places.RankBy.DISTANCE,
+        type: 'cafe',
+        keyword: ''
+      };
+
+      service = new google.maps.places.PlacesService(map);
+      service.nearbySearch(request, nearbyCallback);
+    }
+
+    function restaurants(position) {
+      let request = {
+        location: position,
+        rankBy: google.maps.places.RankBy.DISTANCE,
+        type: 'restaurants',
+        keyword: 'dog-friendly'
+      };
+
+      service = new google.maps.places.PlacesService(map);
+      service.nearbySearch(request, nearbyCallback);
+    }
+
+        function museums(position) {
+      let request = {
+        location: position,
+        rankBy: google.maps.places.RankBy.DISTANCE,
+        type: 'museum',
+        keyword: ''
+      };
+
+      service = new google.maps.places.PlacesService(map);
+      service.nearbySearch(request, nearbyCallback);
+    }
+     function parks(position) {
+      let request = {
+        location: position,
+        rankBy: google.maps.places.RankBy.DISTANCE,
+        type: 'park',
+        keyword: 'dog-friendly'
+      };
+
+      service = new google.maps.places.PlacesService(map);
+      service.nearbySearch(request, nearbyCallback);
+    }
+
+    function nearbyCallback(results, status) {
+      if (status == google.maps.places.PlacesServiceStatus.OK) {
+        createMarkers(results);
+      }
+    }
+    
+
+    function createMarkers(places) {
+      places.forEach(place => {
+        let marker = new google.maps.Marker({
+          position: place.geometry.location,
+          map: map,
+          title: place.name,
+        
+        });
+        google.maps.event.addListener(marker, 'click', () => {
+          let request = {
+            placeId: place.place_id,
+            fields: ['name', 'formatted_address', 'geometry', 'rating',
+              'website', 'photos']
+          };
+
+          service.getDetails(request, (placeResult, status) => {
+            showDetails(placeResult, marker, status)
+          });
+        });
+
+         bounds.extend(place.geometry.location);
+      });
+
+       map.fitBounds(srictbounds);
     }
