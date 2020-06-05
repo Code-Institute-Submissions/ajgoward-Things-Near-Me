@@ -9,6 +9,9 @@
 		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<script src="https://kit.fontawesome.com/90ee600770.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="assets/style/style.css" type="text/css">
+    <link rel="stylesheet" href="assets/style/map-style.css" type="text/css">
+    <script src="assets/javaScript/dog-friendly-map.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<title>Things Near Me</title>
 </head>
 
@@ -33,40 +36,26 @@
 			<img  class="full-image" src="assets/images/relax.jpg" alt="header image">
 </div>
 		</div>
-		<section class="container-fluid background-color main-content-padding">
-			<div class="row">
-				<div class="col-md-12 header">
-					<h1>About <i class="fas fa-beer"></i></h1>
+       <div class="row ">
+				<div class="col-md-12 header backgorund-color">
+					<h1>Dog-Friendly</h1>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-12 header">
-					<h3>Welcome to Things Near Me in this website you will find locations for resturants , cafes, bars,
-						museums that are:</h3>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6 header">
-					<h4>Child-Friendly</h4>
-				</div>
-				<div class="col-md-5 child-Friendly-image">
-				</div>
-			</div>
-            <div class="row padding">
-				<div class="col-md-6 header">
-					<h4>Dog-Friendly</h4>
-				</div>
-				<div class="col-md-5 Dog-Friendly-image">
-				</div>
-			</div>
-		</section>
+            <div id="panel"></div>
+				<div id="map"></div>
+        
+			
 
 		<footer class="container-fluid">
-        <div class="row ">
-        <div class="col-md-12">
-        <h3 class="footer-text">Please Allow Location For Things Near Me To Use Features</h3>
-        </div></div>
+			<div class="row ">
+				<div class="col-md-12">
+					<h3 class="footer-text">Please Allow Location For Things Near Me To Use Features</h3>
+				</div>
+			</div>
 		</footer>
+		<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD08tkFnjgzBVCAsXQ65SSYBvcxT4G2BKc&libraries=places&callback=initMap">
+		</script>
 </body>
 
 </html>
