@@ -5,13 +5,14 @@
     background-clip: black;
 }
 
-
+/* ----- this styles the marker box----*/
 .gm-style .gm-style-iw {
-    font-weight: 300;
-    font-size: 13px;
+    font-weight: 400;
+    font-size: 20px;
     overflow: hidden;
+  font-family: "Architects Daughter",sans-serif;
      color:  #081B19;
-    
+    border-radius: 30px;
 }
 
  html,
@@ -52,7 +53,7 @@
 
     .place,
     p {
-      font-family: 'open sans', arial, sans-serif;
+      font-family: 'Playfair Display', arial, sans-serif;
       padding-left: 18px;
       padding-right: 18px;
       color:  #E3B579;

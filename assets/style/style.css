@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Playfair+Display&display=swap');
+
+
+
 /*----------------These are the navbar styles_-------*/
+
+
 
 .navbar{
     font-size: 30px;
@@ -7,13 +13,13 @@
 
 /*--https://stackoverflow.com/questions/30155699/bootstrap-navbar-font-change-inquiry--*/
 .navbar a{
-    font-family: "Satisfy",sans-serif !important;
+    font-family: "Architects Daughter",sans-serif !important;
     color:  #E3B579 !important;
 }
 
 .navbar-brand{
-    font-family: "Satisfy",sans-serif;
-    font-size: 20px;
+    font-family: "Architects Daughter",sans-serif;
+    font-size: 50px;
     
 }
 .navbar-light .navbar-brand {
@@ -52,6 +58,7 @@ footer {
 }
 
 .footer-text{
+    font-family: "Architects Daughter",sans-serif;
      color: #E3B579;
      text-align: center;
      padding: 20px;
@@ -60,6 +67,15 @@ footer {
 /*----------------These are the index.html styles-------*/
 
 .header {
+     font-family: "Architects Daughter",sans-serif;
+    text-align: center;
+    font-size: 50px;
+    color: #E3B579;
+    background-color: #081B19;
+}
+
+.about-text{
+    font-family: "Playfair Display",sans-serif;
     text-align: center;
     font-size: 50px;
     color: #E3B579;
@@ -104,8 +120,10 @@ footer {
 }
 
 h4 {
+     font-family: "Architects Daughter",sans-serif;
     padding-top: 250px;
     font-size: 50px;
+    
 }
 
 /*----------------Note i have changed the styles of elements to make the page more apealing to phone users-------*/
