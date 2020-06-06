@@ -1,5 +1,6 @@
 /*----these are the variables that will be used to call the map and get the user location and also show a info window---*/
-
+/*-- i recieved help on how to do this on https://codelabs.developers.google.com/codelabs/google-maps-nearby-search-js/#0
+        which is a tutorial on how to implement a geoloacted map and a business search and then i added my own code accordingly--*/
 let pos;
     let map;
      let bounds;
@@ -29,7 +30,7 @@ let pos;
 
           infoWindow.setPosition(pos);
           /*---this tells the user where they are on the map--*/
-          infoWindow.setContent('Location found.');
+          infoWindow.setContent('YOU ARE HERE');
           infoWindow.open(map);
           map.setCenter(pos);
             /*----these are listeners for my place search functions---*/
