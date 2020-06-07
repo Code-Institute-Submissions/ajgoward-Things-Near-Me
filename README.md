@@ -57,7 +57,7 @@ website that does just that , in a eye catching a pleasing way.
 *  Like the usual google maps there is a draggable icon near the zoom buttoms which you can drag onto your chosen street to view street view
 ### Wireframes 
 
-For this I used balsamiq please find the pdf in the [Wireframes](Wireframes/Things Near Me.pdf)
+For this I used balsamiq please find the pdf in the [Wireframes](Wireframes/Things-Near-Me.pdf)
 
 ## Existing Features 
 *	Navigation bar- allows all users to select the content they want to view by simply clicking them , this also collapses into a toggle on mobile devices to maintain space 
@@ -180,6 +180,8 @@ When i deployed my project i sent it to freinds and family for feedback as furth
 * Dog picture -  https://unsplash.com/photos/ZRZSmK362Xw
 
 * Child picture - https://unsplash.com/photos/4R6pg0Iq5IU
+
+* Custom map markers - https://icons8.com/icons/set/map-marker 
 
 * Font awesome -https://fontawesome.com/icons?d=gallery
 * Google fonts -https://fonts.google.com/

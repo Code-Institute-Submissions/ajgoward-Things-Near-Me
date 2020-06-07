@@ -37,6 +37,7 @@
     #panel {
       height: auto;
       width:fit-content;
+      position: relative;
       
     }
 }
