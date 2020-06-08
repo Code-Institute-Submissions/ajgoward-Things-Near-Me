@@ -69,4 +69,12 @@
       color: cadetblue;
     }
 
+.pac-input{z-index: 0;
+    position: absolute;
+    left: 189px;
+    top: 0px;
+    width: auto;
+    height: auto;
+    font-size: 30px;
+}
    

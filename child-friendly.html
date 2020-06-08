@@ -41,11 +41,25 @@
 					<h1>Child-Friendly</h1>
 				</div>
 			</div>
-            <!---these divs will hold the map element and the info panel-->
-            <div id="panel"></div>
-				<div id="map"></div>
+   
+      <div style="display: none">
+        <input id="pac-input"
+               class="controls"
+               type="text"
+               placeholder="Enter a location">
+    </div>
+    <div id="type-div">
+    <select name="type-selector" id="type-selector">
+    <option value="1">Cafe</option>
+    <option value="2">Bars</option>
+    <option value="3">Restaurants</option>
+    <option value="5">Parks</option></select></div>
+    <div id="map"></div>
+     <div id="infowindow-content">
+        <span id="place-name" class="title"></span><br>
         
-			
+        <span id="place-address"></span>
+     </div>
 
 		<footer class="container-fluid">
 			<div class="row ">
