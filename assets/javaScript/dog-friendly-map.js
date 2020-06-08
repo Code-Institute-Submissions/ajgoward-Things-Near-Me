@@ -38,6 +38,7 @@ let pos;
         parks(pos);
         museums(pos);
         bar(pos);
+        autocomplete();
          }, () => {
              handleLocationError(true, infoWindow);
         });
@@ -66,6 +67,58 @@ let pos;
         parks(pos);
         museums(pos);
         bar(pos);
+        autocomplete();
+    }
+    function autocomplete(){  var input = document.getElementById('pac-input');
+
+        var autocomplete = new google.maps.places.Autocomplete(input);
+       
+
+        // Specify just the place data fields that you need.
+        autocomplete.setFields(
+            ['place_id', 'geometry', 'name', 'formatted_address']);
+
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        var infowindow = new google.maps.InfoWindow();
+        var infowindowContent = document.getElementById('infowindow-content');
+        infowindow.setContent(infowindowContent);
+
+        var marker = new google.maps.Marker({map: map});
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+
+        autocomplete.addListener('place_changed', function() {
+          infowindow.close();
+
+          var place = autocomplete.getPlace();
+
+          if (!place.geometry) {
+            return;
+          }
+
+          if (place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+          } else {
+            map.setCenter(place.geometry.location);
+            map.setZoom(17);
+          }
+
+          // Set the position of the marker using the place ID and location.
+          marker.setPlace({
+            placeId: place.place_id,
+            location: place.geometry.location
+          });
+
+          marker.setVisible(true);
+
+          infowindowContent.children['place-name'].textContent = place.name;
+          infowindowContent.children['place-address'].textContent =
+              place.formatted_address;
+          infowindow.open(map, marker);
+        });
     }
  /*-- my place search functions, google only allows one type of place to be searched at one time , and will
         only search the last type ie 'cafe,pub,park' only park will be searched , so i got around this by creating mutiple 
