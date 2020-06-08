@@ -4,7 +4,7 @@
           center: {lat: -34.397, lng: 150.644},
           zoom: 6
         });
-
+        autocomplete()
         infoWindow = new google.maps.InfoWindow;
 
         // Try HTML5 geolocation.
@@ -36,8 +36,11 @@
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       
+    autocomplete()
+        
+      }
 
-        var input = document.getElementById('pac-input');
+    function autocomplete(){  var input = document.getElementById('pac-input');
 
         var autocomplete = new google.maps.places.Autocomplete(input);
        
@@ -87,23 +90,4 @@
               place.formatted_address;
           infowindow.open(map, marker);
         });
-        nearbySearch(pos, autocomplete)
-      }
-
-      function nearbySearch(position){
-       var request = {
-   location: position,
-    radius: '500',
-    type: ['restaurant']
-  };
-
-  service = new google.maps.places.PlacesService(map);
-  service.nearbySearch(request, callback);
-}
-function callback(results, status) {
-  if (status == google.maps.places.PlacesServiceStatus.OK) {
-    for (var i = 0; i < results.length; i++) {
-      createMarker(results[i]);
     }
-  }
-}
