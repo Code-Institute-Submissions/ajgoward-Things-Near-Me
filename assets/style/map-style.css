@@ -24,14 +24,15 @@
     }
 /*-style of the side pannel--*/
  #panel {
-      height: 100%;
-    
+      margin-top: 100px;
+    height: auto;
       background-color: #081B19;
       position: absolute;
       z-index: 1;
       overflow-x: hidden;
       transition: all .2s ease-out;
       width:25%;
+       
     }
 @media only screen and (max-width: 768px){
     #panel {

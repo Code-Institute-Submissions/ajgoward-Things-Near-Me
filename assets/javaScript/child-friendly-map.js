@@ -92,11 +92,6 @@ let pos;
 
         autocomplete.addListener('place_changed', function() {
           infowindow.close();
-          cafes(pos);
-        restaurants(pos);
-        parks(pos);
-        museums(pos);
-        bar(pos);
 
           var place = autocomplete.getPlace();
 
@@ -123,6 +118,11 @@ let pos;
           infowindowContent.children['place-address'].textContent =
               place.formatted_address;
           infowindow.open(map, marker);
+          cafes(place.geometry.location);
+        restaurants(place.geometry.location);
+        parks(place.geometry.location);
+        museums(place.geometry.location);
+        bar(place.geometry.location);
         });
     }
  /*-- my place search functions, google only allows one type of place to be searched at one time , and will
@@ -131,7 +131,7 @@ let pos;
      function cafes(position) {
       let request = {
         location: position,
-        radius: 2000,
+        radius: 1000,
         type: 'cafe',
         keyword: 'dog-friendly'
       };
@@ -143,7 +143,7 @@ let pos;
     function restaurants(position) {
       let request = {
         location: position,
-       radius: 2000,
+       radius: 1000,
         type: 'restaurant',
         keyword: 'dog-friendly'
       };
@@ -154,7 +154,7 @@ let pos;
  function bar(position) {
       let request = {
         location: position,
-       radius: 2000,
+       radius: 1000,
         type: 'bar',
         keyword: 'dog-friendly'
       };
@@ -165,7 +165,7 @@ let pos;
         function museums(position) {
       let request = {
         location: position,
-        radius: 2000,
+        radius: 1000,
         type: 'museum',
         keyword: 'dog-friendly'
       };
@@ -176,7 +176,7 @@ let pos;
      function parks(position) {
       let request = {
         location: position,
-        radius: 2000,
+        radius: 1000,
         type: 'park',
         keyword: 'dog-friendly'
       };

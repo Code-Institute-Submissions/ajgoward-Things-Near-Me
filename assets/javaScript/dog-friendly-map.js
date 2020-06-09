@@ -38,7 +38,7 @@ let pos;
         parks(pos);
         museums(pos);
         bar(pos);
-        autocomplete();
+        
          }, () => {
              handleLocationError(true, infoWindow);
         });

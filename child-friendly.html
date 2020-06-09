@@ -41,6 +41,8 @@
 					<h1>Child-Friendly</h1>
 				</div>
 			</div>
+
+            <div id="panel"></div>
    
       <div style="display: none">
         <input id="pac-input"
@@ -49,12 +51,12 @@
                placeholder="Enter a location">
     </div>
     <div id="type-div">
-    <select name="type-selector" id="type-selector" onchange="nearbySearch()">
-    <option value="1">Cafe</option>
-    <option value="2">Bars</option>
-    <option value="3">Restaurants</option>
-    <option value="5">Parks</option></select></div>
-    <div id="map"></div>
+    <select name="type-selector" id="type-selector" >
+    <option class="type-selector"  value="1" onchange="cafes( 'cafe')">Cafe</option>
+    <option class="type-selector"  value="2" onchange="bar('bar')">Bars</option>
+    <option  id="type-selector" value="3" onchange="restaurants('restuarant')">Restaurants</option>
+    <option  id="type-selector" value="4" onchange="parks('park')">Parks</option></select></div>
+    <div id="map" class=col-nd-8></div>
      <div id="infowindow-content">
         <span id="place-name" class="title"></span><br>
         
