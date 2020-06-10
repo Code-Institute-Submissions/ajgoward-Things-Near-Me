@@ -1,28 +1,21 @@
 # Things Near Me 
 
-This is a website that accesses the users location to show child and Dog friendly :
+This is a website that accesses the users location to show  Dog friendly :
 
 * Cafes
 
 * Bars/restaurants
 
-* Parks
+* Parks 
 
-* museums 
-
-As a Father and a Dog owner I struggle finding appropiate places that i can take my child or dog so i decided to make a
+As  a Dog owner I struggle finding appropiate places that i can take my  dog so i decided to make a
 website that does just that , in a eye catching a pleasing way.
 
 ## UX
  
 ### This website is for:
-* Parents/Guardians
-
-* Familys 
 
 * Dog owners 
-
-* Carers 
 
 ### What they want to achieve:
 * Learn What the website is about 
@@ -164,7 +157,7 @@ When i deployed my project i sent it to freinds and family for feedback as furth
 ## Credits 
 ### Code 
 *	Code institute for the knowledge and use of there code practices -https://courses.codeinstitute.net/login
-
+*   google maps auto complete - https://developers.google.com/maps/documentation/javascript/examples/places-searchbox
 *	Tutorial on how to use the google maps place api with near by bussines search https://codelabs.developers.google.com/codelabs/google-maps-nearby-search-js/#0   
 *	Bootstrap- for style sheet , nav bar  https://getbootstrap.com/
 *	Google maps platfrom - for documentation to help me understand how to impletement the map with a key and how to customise my own map https://developers.google.com/places/web-service/search
@@ -178,8 +171,6 @@ When i deployed my project i sent it to freinds and family for feedback as furth
 * Hero image -https://unsplash.com/photos/zlABb6Gke24
 
 * Dog picture -  https://unsplash.com/photos/ZRZSmK362Xw
-
-* Child picture - https://unsplash.com/photos/4R6pg0Iq5IU
 
 * Custom map markers - https://icons8.com/icons/set/map-marker 
 
