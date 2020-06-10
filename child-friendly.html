@@ -41,21 +41,16 @@
 					<h1>Child-Friendly</h1>
 				</div>
 			</div>
-
-            <div id="panel"></div>
-   
+<!------this is the info panel-->
+            <div id="panel" ></div>
+   <!---serach bar-->
       <div style="display: none">
         <input id="pac-input"
                class="controls"
                type="text"
                placeholder="Enter a location">
     </div>
-    <div id="type-div">
-    <select name="type-selector" id="type-selector" >
-    <option class="type-selector"  value="1" onchange="cafes( 'cafe')">Cafe</option>
-    <option class="type-selector"  value="2" onchange="bar('bar')">Bars</option>
-    <option  id="type-selector" value="3" onchange="restaurants('restuarant')">Restaurants</option>
-    <option  id="type-selector" value="4" onchange="parks('park')">Parks</option></select></div>
+  
     <div id="map" class=col-nd-8></div>
      <div id="infowindow-content">
         <span id="place-name" class="title"></span><br>
@@ -79,7 +74,7 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
 			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
 		</script>
-         <!---these divs will hold the map element and the info panel-->
+      
 		<script async defer
 			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD08tkFnjgzBVCAsXQ65SSYBvcxT4G2BKc&libraries=places&callback=initMap">
 		</script>

@@ -5,6 +5,23 @@
     background-clip: black;
 }
 
+/*---style for the search bar on the map ---*/
+#pac-input{z-index: 0;
+    position: absolute;
+    left: 189px;
+    top: 0px;
+    margin-top: 10px;
+    font-size: 20px;
+     font-family: "Architects Daughter",sans-serif;
+     color:  #081B19;
+
+}
+
+@media only screen and (max-width: 768px){
+    #pac-input{
+        font-size: 8px;
+    }
+}
 /* ----- this styles the marker box----*/
 .gm-style .gm-style-iw {
     font-weight: 400;
@@ -70,12 +87,5 @@
       color: cadetblue;
     }
 
-.pac-input{z-index: 0;
-    position: absolute;
-    left: 189px;
-    top: 0px;
-    width: auto;
-    height: auto;
-    font-size: 30px;
-}
+
    
