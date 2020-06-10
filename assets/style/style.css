@@ -86,19 +86,7 @@ footer {
     background-color: #081B19;
 }
 
-.child-Friendly-image{
-     background: url(../images/child-friendly.jpg);
-     height: auto, fit-content; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 500px;
-    padding-right: 40px;
-    width: 100%;
-    border-radius: 60%;
-    margin-top: 60px;
-    box-shadow: 15px 15px 15px  #E3B579;
-}
+
 
 .Dog-Friendly-image{
      background: url(../images/dog-friendly.jpg);
@@ -132,19 +120,7 @@ h4 {
         padding-top: 20px;
     }
 
-    .child-Friendly-image{
-         background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 360px;
-  transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  border-radius: 50%;
-  margin-top: 10px;
-  box-shadow: none;
-  
-    }
+    
 
     .Dog-Friendly-image{
         background-position: center;
