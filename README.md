@@ -28,7 +28,7 @@ website that does just that , in a eye catching a pleasing way.
 
 * A website of said business so they can get necessary information
 
-* Have street view so they know exactly what the street and business looks like from the from  
+* Have street view so they know exactly what the street and business looks like from the from the road
 
 *	(Most important) do it in a time efficient way 
 
@@ -67,8 +67,8 @@ For this I used balsamiq please find the pdf in the [Wireframes](Wireframes/Thin
 *   address of the website-  to easily get directions to that business
 *	website links- to direct away from the main page to learn more about the business
 *   street view draggable icon - so the user can get a street view of chosen location by dragging the icon to it 
-### Features I would like 
 *	A auto complete search bar incase user doesnt want to show location 
+### Features I would like
 
 *   a clickable dropdown list so they user can click on the type of business they want to see
 ### Technologies used
@@ -90,10 +90,11 @@ implemented each section of the code:
 i tested each user story as follows:
 *	Learn What the website is about- go to home page , read about.
 
-*	See a location based map that states where they are – go to either child friendly/dog friendly – pop up asking can Things Near Me can access the user location - if clicked yes - the map zooms in on location 
-    with a marker stating 'YOU ARE HERE' - if no the map shows the location of Manchester with the marker stating foWindow.setContent(browserHasGeolocation ?
+*	See a location based map that states where they are – go to dog friendly – pop up asking can Things Near Me can access the user location - if clicked yes - the map zooms in on location 
+    with a marker stating 'YOU ARE HERE' - if no the map shows no location with the marker stating 
         'Geolocation permissions denied. Using default location.' :
         'Error: Your browser doesn\'t support geolocation.'
+    and the autocomplete search bar appears so the user can serach for there location.
         
 *	To see locations around them on the map marked by markers- once the location is allowed and the map has zoomed in the markers use a animation on drop and drop onto the page
 
@@ -125,6 +126,8 @@ i tested each user story as follows:
 
 * Once i added the sidebar element as the google tutorials said it was thrown off as the postion was relative so after trying on google developer tools i decided the postition was should be absolute 
  this fixed the issue 
+
+*  Google maps Autocomplete was not working properly within the init map function , so i made a autocomplete function and passed that function within the init map . 
 
  *  At first i used the google maps .rankby.distance as the rankby property this showed multiple markers in a big area to the user, so to make this a more user friendly and to get only nearby places
     i changed the rankby property to radius and made that radius (which can only be in metres) to 2000, this fixed the issue

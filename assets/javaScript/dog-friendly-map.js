@@ -63,7 +63,7 @@ function handleLocationError(browserHasGeolocation, infoWindow) {
         'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(map);
     currentInfoWindow = infoWindow;
-    /*----these are listeners for my place search functions---*/
+    /*----this is my listener for my autocomplete search function---*/
 
     autocomplete();
 }
@@ -144,7 +144,7 @@ function cafes(position) {
 function restaurants(position) {
     let request = {
         location: position,
-        radius: 500,
+        radius: 1000,
         type: 'restaurant',
         keyword: 'dog-friendly'
     };
@@ -155,7 +155,7 @@ function restaurants(position) {
 function bar(position) {
     let request = {
         location: position,
-        radius: 500,
+        radius: 1000,
         type: 'bar',
         keyword: 'dog-friendly'
     };
@@ -169,7 +169,7 @@ function bar(position) {
 function parks(position) {
     let request = {
         location: position,
-        radius: 500,
+        radius: 1000,
         type: 'park',
         keyword: 'dog-friendly'
     };
