@@ -15,12 +15,17 @@ and nearby business search*/
     font-size: 20px;
      font-family: "Architects Daughter",sans-serif;
      color:  #081B19;
+     width: 800px;
+     border-bottom-left-radius: 2px;
+     border-bottom-right-radius: 2px;
+     border-color: whitesmoke;
 
 }
 
 @media only screen and (max-width: 768px){
     #pac-input{
         font-size: 8px;
+        width:80px;
     }
 }
 /* ----- this styles the marker box----*/
@@ -30,7 +35,7 @@ and nearby business search*/
     overflow: hidden;
   font-family: "Architects Daughter",sans-serif;
      color:  #081B19;
-    border-radius: 30px;
+    
 }
 
  html,
@@ -50,6 +55,7 @@ and nearby business search*/
       overflow-x: hidden;
       transition: all .2s ease-out;
       width:25%;
+      border-radius: 3px;
        
     }
 @media only screen and (max-width: 768px){

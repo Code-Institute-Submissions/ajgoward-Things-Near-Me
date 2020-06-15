@@ -33,7 +33,7 @@ function Geolocation() {
 
             infoWindow.setPosition(pos);
             /*---this tells the user where they are on the map--*/
-            infoWindow.setContent('Location found.');
+            infoWindow.setContent('You Are Here');
             infoWindow.open(map);
             map.setCenter(pos);
             /*----these are listeners for my place search functions---*/
@@ -53,8 +53,8 @@ function Geolocation() {
 function handleLocationError(browserHasGeolocation, infoWindow) {
     /*---this sets the default location to manchetser if the user doesnt allow location--*/
     pos = {
-        lat: 53.4808,
-        lng: 2.2426
+        lat:  53.483959,
+        lng:  -2.244644
     };
     map = new google.maps.Map(document.getElementById('map'), {
         center: pos,
@@ -63,7 +63,7 @@ function handleLocationError(browserHasGeolocation, infoWindow) {
     /*---if the user doesnt allow location this message will be displayed on the map--*/
     infoWindow.setPosition(pos);
     infoWindow.setContent(browserHasGeolocation ?
-        'Geolocation permissions denied. Using default location.' :
+        'Please use the search bar for your chosen location' :
         'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(map);
     currentInfoWindow = infoWindow;
