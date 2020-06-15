@@ -35,12 +35,11 @@ function initMap() {
             infoWindow.open(map);
             map.setCenter(pos);
             /*----these are listeners for my place search functions---*/
-            cafes(pos);
-            restaurants(pos);
-            parks(pos);
-            
-            bar(pos);
-
+            typeOfPlaceSearch(pos, "cafe");
+            typeOfPlaceSearch(pos, "restaurant");
+            typeOfPlaceSearch(pos, "bar");
+            typeOfPlaceSearch(pos, "park");
+            autocomplete();
         }, () => {
             handleLocationError(true, infoWindow);
         });
@@ -119,58 +118,22 @@ function autocomplete() {
         infowindowContent.children['place-address'].textContent =
             place.formatted_address;
         infowindow.open(map, marker);
-        cafes(place.geometry.location);
-        restaurants(place.geometry.location);
-        parks(place.geometry.location);
-       
-        bar(place.geometry.location);
+          /*----these are listeners for my place search functions---*/
+        typeOfPlaceSearch(place.geometry.location, "cafe");
+        typeOfPlaceSearch(place.geometry.location, "restaurant");
+        typeOfPlaceSearch(place.geometry.location, "bar");
+        typeOfPlaceSearch(place.geometry.location, "park");
+
     });
 }
 /*-- my place search functions, google only allows one type of place to be searched at one time , and will
-       only search the last type ie 'cafe,pub,park' only park will be searched , so i got around this by creating mutiple 
-       functions that search different type of places---*/
-function cafes(position) {
+       only search the first type ie 'cafe,pub,park' only cafe will be searched , so i got around this by creating a 
+       function that search different type of places---*/
+function typeOfPlaceSearch(position, type) {
     let request = {
         location: position,
         radius: 1000,
-        type: 'cafe',
-        keyword: 'dog-friendly'
-    };
-
-    service = new google.maps.places.PlacesService(map);
-    service.nearbySearch(request, nearbyCallback);
-}
-
-function restaurants(position) {
-    let request = {
-        location: position,
-        radius: 1000,
-        type: 'restaurant',
-        keyword: 'dog-friendly'
-    };
-
-    service = new google.maps.places.PlacesService(map);
-    service.nearbySearch(request, nearbyCallback);
-}
-function bar(position) {
-    let request = {
-        location: position,
-        radius: 1000,
-        type: 'bar',
-        keyword: 'dog-friendly'
-    };
-
-    service = new google.maps.places.PlacesService(map);
-    service.nearbySearch(request, nearbyCallback);
-}
-
-
- 
-function parks(position) {
-    let request = {
-        location: position,
-        radius: 1000,
-        type: 'park',
+        type: type,
         keyword: 'dog-friendly'
     };
 
