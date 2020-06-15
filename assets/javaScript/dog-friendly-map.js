@@ -1,7 +1,6 @@
 /*----these are the variables that will be used to call the map and get the user location and also show a info window 
 i recievd this code from https://codelabs.developers.google.com/codelabs/google-maps-nearby-search-js/#0  which is a 
 tutorial on business search---*/
-
 let pos;
 let map;
 let bounds;
@@ -16,7 +15,10 @@ function initMap() {
     currentInfoWindow = infoWindow;
     /*----this adds a sidebar---*/
     infoPane = document.getElementById('panel');
-    /*----this will get the users location and zoom in---*/
+    Geolocation()
+}
+/*----this will get the users location and zoom in---*/
+function Geolocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
             pos = {
@@ -50,7 +52,10 @@ function initMap() {
 
 function handleLocationError(browserHasGeolocation, infoWindow) {
     /*---this sets the default location to manchetser if the user doesnt allow location--*/
-    pos = { lat: 53.4808, lng: 2.2426 };
+    pos = {
+        lat: 53.4808,
+        lng: 2.2426
+    };
     map = new google.maps.Map(document.getElementById('map'), {
         center: pos,
         zoom: 15
@@ -84,13 +89,15 @@ function autocomplete() {
     var infowindowContent = document.getElementById('infowindow-content');
     infowindow.setContent(infowindowContent);
 
-    var marker = new google.maps.Marker({ map: map });
+    var marker = new google.maps.Marker({
+        map: map
+    });
 
-    marker.addListener('click', function () {
+    marker.addListener('click', function() {
         infowindow.open(map, marker);
     });
 
-    autocomplete.addListener('place_changed', function () {
+    autocomplete.addListener('place_changed', function() {
         infowindow.close();
 
         var place = autocomplete.getPlace();
@@ -118,7 +125,7 @@ function autocomplete() {
         infowindowContent.children['place-address'].textContent =
             place.formatted_address;
         infowindow.open(map, marker);
-          /*----these are listeners for my place search functions---*/
+        /*----these are listeners for my place search functions---*/
         typeOfPlaceSearch(place.geometry.location, "cafe");
         typeOfPlaceSearch(place.geometry.location, "restaurant");
         typeOfPlaceSearch(place.geometry.location, "bar");
@@ -166,7 +173,8 @@ function createMarkers(places) {
             let request = {
                 placeId: place.place_id,
                 fields: ['name', 'formatted_address', 'geometry', 'rating',
-                    'website', 'photos']
+                    'website', 'photos'
+                ]
             };
 
             service.getDetails(request, (placeResult, status) => {
@@ -237,4 +245,4 @@ function showPanel(placeResult) {
         infoPane.appendChild(websitePara);
     }
     infoPane.classList.add("open");
-}   
+}
