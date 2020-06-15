@@ -1,5 +1,7 @@
 # Things Near Me 
 
+![alt text](assets/images/multi-device-image.png)
+
 This is a website that accesses the users location to show  Dog friendly :
 
 * Cafes
@@ -82,6 +84,7 @@ For this I used balsamiq please find the pdf in the [Wireframes](Wireframes/Thin
 ## Testing 
 Before i started this project i did a miniuture project of my own to fully understand the google maps api and elements you can find
 the repository  [here](https://github.com/ajgoward/trying-google-maps-features)
+I also tested my application on all devices using a website called Responsinator you can see it [here](http://www.responsinator.com/?url=https%3A%2F%2Fajgoward.github.io%2FThings-Near-Me%2F)
 
 During the creation of this project I decided testing platfroms such as Jasmine was not necessary as the google maps API is a tryed and tested platfrom
 so i viewed the webpage in the browser and used google developer tools to make sure the project looks good, works on all devices and if any bugs apperead when i 
@@ -121,8 +124,8 @@ i tested each user story as follows:
 * Navigation bar toggler was dark and users were unable to see it - so i changed the bootstrap element from navbar-light to navar-dark which changed the the color from black to light .
 
 * I  could only view one type of business at any time after reading the google maps api documentation  google only allows one type of place to be searched at one time , and will
-        only search the last type ie 'cafe,pub,park' only park will be searched . so after trying mutiple ways to bypass this i managed to create different 
-        functions and add the listeners within the map call function to show different types of businesses
+        only search the first type ie 'cafe,pub,park' only cafe will be searched . so after trying mutiple ways to bypass this i managed to create a
+        function and add the listeners within the map call function to show different types of businesses
 
 * Once i added the sidebar element as the google tutorials said it was thrown off as the postion was relative so after trying on google developer tools i decided the postition was should be absolute 
  this fixed the issue 
