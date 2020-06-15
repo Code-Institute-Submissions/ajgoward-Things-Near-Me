@@ -174,6 +174,8 @@ When i deployed my project i sent it to freinds and family for feedback as furth
 * navbar overide of font family - https://stackoverflow.com/questions/30155699/bootstrap-navbar-font-change-inquiry
 
 ### Media 
+* Responsive image for README - http://techsini.com/multi-mockup/index.php
+
 * Hero image -https://unsplash.com/photos/zlABb6Gke24
 
 * Dog picture -  https://unsplash.com/photos/ZRZSmK362Xw
