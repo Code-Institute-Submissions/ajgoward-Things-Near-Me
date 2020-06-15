@@ -1,6 +1,6 @@
 # Things Near Me 
 
-![alt text](assets/images/multi-device-image.png)
+![multi-device image](assets/images/multi-device-image.png)
 
 This is a website that accesses the users location to show  Dog friendly :
 
@@ -88,7 +88,14 @@ I also tested my application on all devices using a website called Responsinator
 
 During the creation of this project I decided testing platfroms such as Jasmine was not necessary as the google maps API is a tryed and tested platfrom
 so i viewed the webpage in the browser and used google developer tools to make sure the project looks good, works on all devices and if any bugs apperead when i 
-implemented each section of the code:
+implemented each section of the code.
+
+I also Learnt about a webpage auditor called Lighthouse i put my deployed webpage through that and this was the score:
+
+![lighthouse](assets/images/lighthouse.png)
+
+As you can see it scored high on 3 of the critieria but moderate on performance as reading the report bootstrap is slowing the webpage down, which is not something 
+i wish to change at this time.
 
 i tested each user story as follows:
 *	Learn What the website is about- go to home page , read about.
@@ -174,6 +181,8 @@ When i deployed my project i sent it to freinds and family for feedback as furth
 * navbar overide of font family - https://stackoverflow.com/questions/30155699/bootstrap-navbar-font-change-inquiry
 
 ### Media 
+* lighthouse testing - https://web.dev/measure/?gclid=Cj0KCQjwuJz3BRDTARIsAMg-HxU3cY1mcAGoQ3I6EiLsIYgKsC9VLXVIW1FDcZM3Vjuj-Dkncprhz38aAh-bEALw_wcB
+
 * Responsive image for README - http://techsini.com/multi-mockup/index.php
 
 * Hero image -https://unsplash.com/photos/zlABb6Gke24
