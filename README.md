@@ -41,7 +41,7 @@ website that does just that , in a eye catching a pleasing way.
 
 *	There will be different pages so a user can jump from to the most relevant information 
 
-*	when the map is loaded there is a clear pop up asking for location acess and when allowed it will zoom in and state 'YOU ARE HERE' marker added to the map 
+*	when the map is loaded there is a clear pop up asking for location acess and when allowed it will zoom in and state 'YOU ARE HERE' marker added to the map, there will also be a searchbar for the user to search for there location.
 
 *   Once the map has zoomed in on the users location the custom markers will drop and show neraby businesses
 
@@ -69,7 +69,7 @@ For this I used balsamiq please find the pdf in the [Wireframes](Wireframes/Thin
 *   address of the website-  to easily get directions to that business
 *	website links- to direct away from the main page to learn more about the business
 *   street view draggable icon - so the user can get a street view of chosen location by dragging the icon to it 
-*	A auto complete search bar incase user doesnt want to show location 
+*	A auto complete search bar incase user doesnt want to show location and so the user can search for a chosen location.
 ### Features I would like
 
 *   a clickable dropdown list so they user can click on the type of business they want to see
@@ -171,7 +171,7 @@ When i deployed my project i sent it to freinds and family for feedback as furth
 ### Code 
 *	Code institute for the knowledge and use of there code practices -https://courses.codeinstitute.net/login
 *   google maps auto complete - https://developers.google.com/maps/documentation/javascript/examples/places-searchbox
-*	Tutorial on how to use the google maps place api with near by bussines search https://codelabs.developers.google.com/codelabs/google-maps-nearby-search-js/#0   
+*	Tutorial on how to use the google maps place api with near by business search https://codelabs.developers.google.com/codelabs/google-maps-nearby-search-js/#0   
 *	Bootstrap- for style sheet , nav bar  https://getbootstrap.com/
 *	Google maps platfrom - for documentation to help me understand how to impletement the map with a key and how to customise my own map https://developers.google.com/places/web-service/search
 *	W3schools – for tutorials and code uses -https://www.w3schools.com/ 
