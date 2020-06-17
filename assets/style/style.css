@@ -90,7 +90,7 @@ footer {
 
 .Dog-Friendly-image{
      background: url(../images/dog-friendly.jpg);
-     height: auto, fit-content; 
+     height: auto; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
