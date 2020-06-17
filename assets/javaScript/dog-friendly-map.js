@@ -188,7 +188,7 @@ function createMarkers(places) {
     map.fitBounds(bounds);
 }
 
-/*--this is the function that will create  the information ---*/
+/*--this is the function that will create  the information i recieved this from the business search tutorial please see README ---*/
 function showDetails(placeResult, marker, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
         let placeInfowindow = new google.maps.InfoWindow();

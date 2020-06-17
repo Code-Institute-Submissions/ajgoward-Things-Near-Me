@@ -102,7 +102,7 @@ i tested each user story as follows:
 
 *	See a location based map that states where they are – go to dog friendly – pop up asking can Things Near Me can access the user location - if clicked yes - the map zooms in on location 
     with a marker stating 'YOU ARE HERE' - if no the map shows no location with the marker stating 
-        'Geolocation permissions denied. Using default location.' :
+        'Please use the search bar for your chosen location' :
         'Error: Your browser doesn\'t support geolocation.'
     and the autocomplete search bar appears so the user can serach for there location.
         
