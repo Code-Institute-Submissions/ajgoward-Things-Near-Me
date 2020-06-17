@@ -3,7 +3,6 @@ and nearby business search*/
 /*-stylying of the map element--*/
 #map{
     height: 100%;
-    background-clip: black;
 }
 
 /*---style for the search bar on the map ---*/
