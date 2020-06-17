@@ -1,13 +1,13 @@
 /*----these are the variables that will be used to call the map and get the user location and also show a info window 
 i recievd this code from https://codelabs.developers.google.com/codelabs/google-maps-nearby-search-js/#0  which is a 
 tutorial on business search---*/
-let pos;
-let map;
-let bounds;
-let infoWindow;
-let currentInfoWindow;
-let service;
-let infoPane;
+var pos;
+var map;
+var bounds;
+var infoWindow;
+var currentInfoWindow;
+var service;
+var infoPane;
 /*----function to call the map from the api ---*/
 function initMap() {
     bounds = new google.maps.LatLngBounds();
@@ -15,7 +15,7 @@ function initMap() {
     currentInfoWindow = infoWindow;
     /*----this adds a sidebar---*/
     infoPane = document.getElementById('panel');
-    Geolocation()
+    Geolocation();
 }
 /*----this will get the users location and zoom in---*/
 function Geolocation() {
@@ -178,7 +178,7 @@ function createMarkers(places) {
             };
 
             service.getDetails(request, (placeResult, status) => {
-                showDetails(placeResult, marker, status)
+                showDetails(placeResult, marker, status);
             });
         });
 
