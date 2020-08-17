@@ -9,6 +9,12 @@
 		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<script src="https://kit.fontawesome.com/90ee600770.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="assets/style/style.css" type="text/css">
+     <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_Bw0wFLIW8MS0xjexXyTL8");
+        })();
+    </script>
 	<title>Things Near Me</title>
 </head>
 
@@ -36,26 +42,41 @@
 		<section class="container-fluid background-color main-content-padding">
 			<div class="row">
 				<div class="col-md-12 header">
-					<h1>About <i class="fas fa-beer"></i></h1>
+			<!----------contact form-->
+			
+						<h3 class="contact-heading uppercase text-center" id="contact">Dont see Your business?</h3>
+						<h5 class="uppercase text-center">Please Contact</h5>
+					</div>
+					<div class="center-form row">
+						<form onsubmit="return sendMail(this);">
+							<input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
+							<input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
+							<textarea rows="5" name="projectsummary" class="form-control" id="projectsummary" placeholder="Business Description" required></textarea>
+							<button type="submit" class="btn btn-secondary center-block">Send Request</button>
+						</form>
+					</div>
 				</div>
-			</div>
+			</section>
 
-<footer class="container-fluid">
-			<div class="row ">
-				<div class="col-md-12">
-					<h3 class="footer-text">Please Allow Location For Things Near Me To Use Features</h3>
+			<footer class="container-fluid">
+				<div class="row ">
+					<div class="col-md-12">
+						<h3 class="footer-text">Please Allow Location For Things Near Me To Use Features</h3>
+					</div>
 				</div>
-			</div>
-		</footer>
-		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-		</script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-		</script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-		</script>
+			</footer>
+			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+				integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+				crossorigin="anonymous">
+			</script>
+			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+				integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+				crossorigin="anonymous">
+			</script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+				integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+				crossorigin="anonymous">
+			</script>
 </body>
 
 </html>
