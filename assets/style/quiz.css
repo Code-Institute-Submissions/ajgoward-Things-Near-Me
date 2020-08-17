@@ -3,4 +3,9 @@
 #quiz{
     font-family: "Playfair";
     padding-left: 50px;
-    color:#E3B579;}
+    color:#E3B579;
+    text-align: center;}
+
+#after_quiz{
+    visibility: hidden;
+}
