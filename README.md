@@ -32,6 +32,10 @@ website that does just that , in a eye catching a pleasing way.
 
 * Have street view so they know exactly what the street and business looks like from the from the road
 
+* Have a dog styled game if they are waiting to decide 
+
+* Have a contact form if they do not see a business
+
 *	(Most important) do it in a time efficient way 
 
 ### How will they achieve it:
@@ -47,9 +51,14 @@ website that does just that , in a eye catching a pleasing way.
 
 *   Once those custom markers are clicked the business information willn load into a side bar
 
+
 *  This side bar will show the Picture , The rating , the address and the website of the business
 
 *  Like the usual google maps there is a draggable icon near the zoom buttoms which you can drag onto your chosen street to view street view
+
+* Have a dog quiz 
+
+* Have a contact form
 ### Wireframes 
 
 For this I used balsamiq please find the pdf in the [Wireframes](Wireframes/Things-Near-Me.pdf)
@@ -70,6 +79,8 @@ For this I used balsamiq please find the pdf in the [Wireframes](Wireframes/Thin
 *	website links- to direct away from the main page to learn more about the business
 *   street view draggable icon - so the user can get a street view of chosen location by dragging the icon to it 
 *	A auto complete search bar incase user doesnt want to show location and so the user can search for a chosen location.
+* A dog quiz with feeback and multipul choice
+* A contact form
 ### Features I would like
 
 *   a clickable dropdown list so they user can click on the type of business they want to see
@@ -77,7 +88,7 @@ For this I used balsamiq please find the pdf in the [Wireframes](Wireframes/Thin
 *	HTML5- standard language of a webpage 
 
 *	CSS3- for customised styling 
-*	Javascript- I used this for the map element  
+*	Javascript- I used this for the map element , Quiz and contact 
 *	Bootstrap – I used this for styling of the webpage and to make it more responsive
 *   API - I used the google maps api with my own key 
 
@@ -177,6 +188,7 @@ When i deployed my project i sent it to freinds and family for feedback as furth
 *	W3schools – for tutorials and code uses -https://www.w3schools.com/ 
 *   W3C CSS - validation of my css - https://jigsaw.w3.org/css-validator/
 *   W3C - validation of my HTML - https://validator.w3.org/
+*  Youtube - for tutorials - https://www.youtube.com/watch?v=C7NsIRhoWuE
 
 * navbar overide of font family - https://stackoverflow.com/questions/30155699/bootstrap-navbar-font-change-inquiry
 
