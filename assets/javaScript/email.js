@@ -1,3 +1,4 @@
+/*--- i learnt this with code institute --*/
 function sendMail (contactForm){
         emailjs.send("gmail","emal", {
             "from_name" : contactForm.name.value,

@@ -4,8 +4,26 @@
     font-family: "Playfair";
     padding-left: 50px;
     color:#E3B579;
-    text-align: center;}
+    text-align: center;
+    font-size: 40px;}
 
 #after_quiz{
     visibility: hidden;
+    color: #E3B579;
+     text-align: center;
+     padding-top: 30px;
+     font-family: "Playfair";
+     font-size: 40px;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+   
+    padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    img { width: 100%;
+    height: auto;}
 }
