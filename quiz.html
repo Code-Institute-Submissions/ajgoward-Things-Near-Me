@@ -47,26 +47,75 @@
         <div class="col-md-12">
         <!------------quiz form -->
         <form id="quiz" name="quiz">
-        <p class="about-text">Why do dogs lick humans?</p><br>
+        <p class="about-text">Why do dogs lick humans?</p>
         <input type="radio" id="multi" name="question1" value="affection"> A sign of affection<br>
          <input type="radio" id="multi" name="question1" value="clean"> To clean you<br>
           <input type="radio" id="multi" name="question1" value="likeit"> Because they like it<br>
+          <p id="RightQ1"></p>
+          <p id="WrongQ1"></p>
           <br>
         <p  class="about-text">Why do dogs wag their tails?</p><br>
          <input type="radio" id="multi" name="question2" value="cos"> Because its there<br>
          <input type="radio" id="multi" name="question2" value="communicate"> To Communicate<br>
           <input type="radio" id="multi" name="question2" value="weapon"> As a weapon<br>
+          <p id="RightQ2"></p>
+          <p id="WrongQ2"></p>
           <br>
           <p  class="about-text">Do dogs dream?</p><br>
         <input type="radio" id="multi" name="question3" value="Yes"> Yes<br>
          <input type="radio" id="multi" name="question3" value="No"> No<br>
+         <p id="RightQ3"></p>
+          <p id="WrongQ3"></p>
             <br>
             <p class="about-text">Why do dogs chase their tails?</p><br>
         <input type="radio" id="multi" name="question4" value="bored"> A sign of boredom<br>
          <input type="radio" id="multi" name="question4" value="becos"> Because its there<br>
           <input type="radio" id="multi" name="question4" value="food"> To eat it<br>
+          <p id="RightQ4"></p>
+          <p id="WrongQ4"></p>
           <br>
-          <input type="button" value="Done" onclick="check()">
+          <p  class="about-text"> Which dog breed is the favourite of The Queen of England?</p><br>
+         <input type="radio" id="multi" name="question5" value="corgi"> Corgi<br>
+         <input type="radio" id="multi" name="question5" value="sheepdog"> Sheepdog<br>
+          <input type="radio" id="multi" name="question5" value="bulldog"> Bulldog<br>
+          <p id="RightQ5"></p>
+          <p id="WrongQ5"></p>
+          <br>
+          <p  class="about-text"> How old was the World’s oldest dog when he died?</p><br>
+         <input type="radio" id="multi" name="question6" value="50"> 50<br>
+         <input type="radio" id="multi" name="question6" value="20"> 20<br>
+          <input type="radio" id="multi" name="question6" value="29"> 29<br>
+          <p id="RightQ6"></p>
+          <p id="WrongQ6"></p>
+          <br>
+          <p  class="about-text"> Which is the smallest dog breed?</p><br>
+         <input type="radio" id="multi" name="question7" value="chihuahua">chihuahua<br>
+         <input type="radio" id="multi" name="question7" value="Bulldog">Bulldog<br>
+          <input type="radio" id="multi" name="question7" value="Dashhund">Dashhund<br>
+          <p id="RightQ7"></p>
+          <p id="WrongQ7"></p>
+          <br>
+          <p  class="about-text">Which of the dog’s senses is most highly developed?</p><br>
+         <input type="radio" id="multi" name="question8" value="Hearing">Hearing<br>
+         <input type="radio" id="multi" name="question8" value="smell">Smell<br>
+          <input type="radio" id="multi" name="question8" value="taste">Taste<br>
+          <p id="RightQ8"></p>
+          <p id="WrongQ8"></p>
+          <br>
+          <p  class="about-text">Dogs cannot see in colour, True or False?</p><br>
+         <input type="radio" id="multi" name="question9" value="true">True<br>
+         <input type="radio" id="multi" name="question9" value="false">False<br>
+         <p id="RightQ9"></p>
+          <p id="WrongQ9"></p>
+          <br>
+          <p  class="about-text">Which is the best pet?</p><br>
+         <input type="radio" id="multi" name="question10" value="Dog">Dog<br>
+         <input type="radio" id="multi" name="question10" value="Cat">Cat<br>
+          <input type="radio" id="multi" name="question10" value="Goldfish">Goldfish<br>
+          <p id="RightQ10"></p>
+          <p id="WrongQ10"></p>
+          <br>
+          <input type="button" value="Done" onclick="completeQuiz()">
         </form></div></div>
         <!---will fill with the javascript based on how many the user has gotten correct-->
         <div class="row">
@@ -74,7 +123,7 @@
         <p id="message"></p>
         <p id="correct"></p>
         <img id="picture">
-        
+        <input type="button" value="restart" onclick="restart()">
         </div></div>
 		</section>
 </body>
