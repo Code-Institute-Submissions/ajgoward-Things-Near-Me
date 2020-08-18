@@ -9,8 +9,8 @@
 		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<script src="https://kit.fontawesome.com/90ee600770.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="assets/style/style.css" type="text/css">
-    <link rel="stylesheet" href="assets/style/quiz.css" type="text/css">
-    <script src="assets/javaScript/quiz.js"></script>
+	<link rel="stylesheet" href="assets/style/quiz.css" type="text/css">
+	<script src="assets/javaScript/quiz.js"></script>
 	<title>Things Near Me</title>
 </head>
 
@@ -25,8 +25,8 @@
 			<div class="navbar-nav ml-auto">
 				<!--recieved ml-auto from https://stackoverflow.com/questions/41513463/bootstrap-4-align-navbar-items-to-the-right-->
 				<a class="nav-item nav-link" href="dog-friendly.html">Dog-Friendly-Map</a>
-                <a class="nav-item nav-link" href="quiz.html">Quiz</a>
-                <a class="nav-item nav-link" href="contact.html">Contact</a>
+				<a class="nav-item nav-link" href="quiz.html">Quiz</a>
+				<a class="nav-item nav-link" href="contact.html">Contact</a>
 
 			</div>
 		</div>
@@ -43,104 +43,136 @@
 					<h1>Quiz <i class="fas fa-question"></i></h1>
 				</div>
 			</div>
-        <div class="row">
-        <div class="col-md-12">
-        <!------------quiz form -->
-        <form id="quiz" name="quiz">
-        <p class="about-text">Why do dogs lick humans?</p>
-        <input type="radio" id="multi" name="question1" value="affection"> A sign of affection<br>
-         <input type="radio" id="multi" name="question1" value="clean"> To clean you<br>
-          <input type="radio" id="multi" name="question1" value="likeit"> Because they like it<br>
-          <p id="RightQ1"></p>
-          <p id="WrongQ1"></p>
-          <br>
-        <p  class="about-text">Why do dogs wag their tails?</p><br>
-         <input type="radio" id="multi" name="question2" value="cos"> Because its there<br>
-         <input type="radio" id="multi" name="question2" value="communicate"> To Communicate<br>
-          <input type="radio" id="multi" name="question2" value="weapon"> As a weapon<br>
-          <p id="RightQ2"></p>
-          <p id="WrongQ2"></p>
-          <br>
-          <p  class="about-text">Do dogs dream?</p><br>
-        <input type="radio" id="multi" name="question3" value="Yes"> Yes<br>
-         <input type="radio" id="multi" name="question3" value="No"> No<br>
-         <p id="RightQ3"></p>
-          <p id="WrongQ3"></p>
-            <br>
-            <p class="about-text">Why do dogs chase their tails?</p><br>
-        <input type="radio" id="multi" name="question4" value="bored"> A sign of boredom<br>
-         <input type="radio" id="multi" name="question4" value="becos"> Because its there<br>
-          <input type="radio" id="multi" name="question4" value="food"> To eat it<br>
-          <p id="RightQ4"></p>
-          <p id="WrongQ4"></p>
-          <br>
-          <p  class="about-text"> Which dog breed is the favourite of The Queen of England?</p><br>
-         <input type="radio" id="multi" name="question5" value="corgi"> Corgi<br>
-         <input type="radio" id="multi" name="question5" value="sheepdog"> Sheepdog<br>
-          <input type="radio" id="multi" name="question5" value="bulldog"> Bulldog<br>
-          <p id="RightQ5"></p>
-          <p id="WrongQ5"></p>
-          <br>
-          <p  class="about-text"> How old was the World’s oldest dog when he died?</p><br>
-         <input type="radio" id="multi" name="question6" value="50"> 50<br>
-         <input type="radio" id="multi" name="question6" value="20"> 20<br>
-          <input type="radio" id="multi" name="question6" value="29"> 29<br>
-          <p id="RightQ6"></p>
-          <p id="WrongQ6"></p>
-          <br>
-          <p  class="about-text"> Which is the smallest dog breed?</p><br>
-         <input type="radio" id="multi" name="question7" value="chihuahua">chihuahua<br>
-         <input type="radio" id="multi" name="question7" value="Bulldog">Bulldog<br>
-          <input type="radio" id="multi" name="question7" value="Dashhund">Dashhund<br>
-          <p id="RightQ7"></p>
-          <p id="WrongQ7"></p>
-          <br>
-          <p  class="about-text">Which of the dog’s senses is most highly developed?</p><br>
-         <input type="radio" id="multi" name="question8" value="Hearing">Hearing<br>
-         <input type="radio" id="multi" name="question8" value="smell">Smell<br>
-          <input type="radio" id="multi" name="question8" value="taste">Taste<br>
-          <p id="RightQ8"></p>
-          <p id="WrongQ8"></p>
-          <br>
-          <p  class="about-text">Dogs cannot see in colour, True or False?</p><br>
-         <input type="radio" id="multi" name="question9" value="true">True<br>
-         <input type="radio" id="multi" name="question9" value="false">False<br>
-         <p id="RightQ9"></p>
-          <p id="WrongQ9"></p>
-          <br>
-          <p  class="about-text">Which is the best pet?</p><br>
-         <input type="radio" id="multi" name="question10" value="Dog">Dog<br>
-         <input type="radio" id="multi" name="question10" value="Cat">Cat<br>
-          <input type="radio" id="multi" name="question10" value="Goldfish">Goldfish<br>
-          <p id="RightQ10"></p>
-          <p id="WrongQ10"></p>
-          <br>
-          <input type="button" value="Done" onclick="completeQuiz()">
-        </form></div></div>
-        <!---will fill with the javascript based on how many the user has gotten correct-->
-        <div class="row">
-        <div class="col-md-12" id="after_quiz">
-        <p id="message"></p>
-        <p id="correct"></p>
-        <img id="picture">
-        <input type="button" value="restart" onclick="restart()">
-        </div></div>
+			<div class="row">
+				<div class="col-md-12">
+					<!------------quiz form -->
+					<form id="quiz" name="quiz">
+						<p class="about-text">Q1 : Why do dogs lick humans?</p>
+						<div class="multi">
+							<input type="radio" id="multi" class="multi" name="question1" value="affection"> A sign of affection<br>
+							<input type="radio" id="multi" name="question1" value="clean"> To clean you<br>
+							<input type="radio" id="multi" name="question1" value="likeit"> Because they like it<br>
+							<p id="RightQ1"></p>
+							<p id="WrongQ1"></p>
+							<br>
+                        </div>
+							<p class="about-text">Q2: Why do dogs wag their tails?</p><br>
+							<div class="multi">
+								<input type="radio" id="multi" name="question2" value="cos"> Because its there<br>
+								<input type="radio" id="multi" name="question2" value="communicate"> To Communicate<br>
+								<input type="radio" id="multi" name="question2" value="weapon"> As a weapon<br>
+								<p id="RightQ2"></p>
+								<p id="WrongQ2"></p>
+								<br>
+                        </div>
+								<p class="about-text">Q3: Do dogs dream?</p><br>
+								<div class="multi">
+									<input type="radio" id="multi" name="question3" value="Yes"> Yes<br>
+									<input type="radio" id="multi" name="question3" value="No"> No<br>
+									<p id="RightQ3"></p>
+									<p id="WrongQ3"></p>
+									<br>
+						</div>
+
+									<p class="about-text">Q4: Why do dogs chase their tails?</p><br>
+									<div class="multi">
+										<input type="radio" id="multi" name="question4" value="bored"> A sign of boredom<br>
+										<input type="radio" id="multi" name="question4" value="becos"> Because its there<br>
+										<input type="radio" id="multi" name="question4" value="food"> To eat it<br>
+										<p id="RightQ4"></p>
+										<p id="WrongQ4"></p>
+										<br>
+								</div>
+										<p class="about-text">Q5: Which dog breed is the favourite of The Queen of
+											England?</p>
+										<br>
+										<div class="multi">
+											<input type="radio" id="multi" name="question5" value="corgi"> Corgi<br>
+											<input type="radio" id="multi" name="question5" value="sheepdog"> Sheepdog<br>
+											<input type="radio" id="multi" name="question5" value="bulldog"> Bulldog<br>
+											<p id="RightQ5"></p>
+											<p id="WrongQ5"></p>
+											<br>
+                                        </div>
+											<p class="about-text">Q6: How old was the World’s oldest dog when he died?</p>
+											<br>
+											<div class="multi">
+												<input type="radio" id="multi" name="question6" value="50"> 50<br>
+												<input type="radio" id="multi" name="question6" value="20"> 20<br>
+												<input type="radio" id="multi" name="question6" value="29"> 29<br>
+												<p id="RightQ6"></p>
+												<p id="WrongQ6"></p>
+												<br>
+                                            </div>
+												<p class="about-text">Q7: Which is the smallest dog breed?</p><br>
+												<div class="multi">
+													<input type="radio" id="multi" name="question7" value="chihuahua"> Chihuahua<br>
+													<input type="radio" id="multi" name="question7" value="Bulldog"> Bulldog<br>
+													<input type="radio" id="multi" name="question7" value="Dashhund"> Dashhund<br>
+													<p id="RightQ7"></p>
+													<p id="WrongQ7"></p>
+													<br>
+                                                </div>
+													<p class="about-text">Q8: Which of the dog’s senses is most highly
+														developed?
+													</p><br>
+													<div class="multi">
+														<input type="radio" id="multi" name="question8" value="Hearing"> Hearing<br>
+														<input type="radio" id="multi" name="question8" value="smell"> Smell<br>
+														<input type="radio" id="multi" name="question8" value="taste"> Taste<br>
+														<p id="RightQ8"></p>
+														<p id="WrongQ8"></p>
+														<br>
+                                                </div>
+														<p class="about-text">Q9: Dogs cannot see in colour, True or False?
+														</p><br>
+														<div class="multi">
+															<input type="radio" id="multi" name="question9" value="true"> True<br>
+															<input type="radio" id="multi" name="question9" value="false"> False<br>
+															<p id="RightQ9"></p>
+															<p id="WrongQ9"></p>
+															<br>
+                                                </div>
+															<p class="about-text">Q10: Which is the best pet?</p><br>
+															<div class="multi">
+																<input type="radio" id="multi" name="question10" value="Dog"> Dog<br>
+																<input type="radio" id="multi" name="question10" value="Cat"> Cat<br>
+																<input type="radio" id="multi" name="question10" value="Goldfish"> Goldfish<br>
+																<p id="RightQ10"></p>
+																<p id="WrongQ10"></p>
+																<br>
+                                                </div>
+																<input type="button" value="Done" id="quizbutton" onclick="completeQuiz()">
+        </form>
+															</div>
+														</div>
+														<!---will fill with the javascript based on how many the user has gotten correct-->
+														<div class="row">
+															<div class="col-md-12 multi" id="after_quiz" >
+																<p id="message"></p>
+																<p id="correct"></p>
+																<img id="picture">
+                                                                <br>
+																<input type="button" value="restart" id="quizbutton" onclick="restart()">
+        </div>
+															</div>
 		</section>
 </body>
-	<footer class="container-fluid">
-			<div class="row ">
-				<div class="col-md-12">
-					<h3 class="footer-text">Please Allow Location For Things Near Me To Use Features</h3>
-				</div>
-			</div>
-		</footer>
-		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-		</script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-		</script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-		</script>
+<footer class="container-fluid">
+	<div class="row ">
+		<div class="col-md-12">
+			<h3 class="footer-text">Please Allow Location For Things Near Me To Use Features</h3>
+		</div>
+	</div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+	integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+</script>
+
 </html>

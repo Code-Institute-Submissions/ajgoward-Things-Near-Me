@@ -103,6 +103,8 @@ function completeQuiz() {
 
 }
 
+
+
 /*----https://stackoverflow.com/questions/3715047/how-to-reload-a-page-using-javascript---*/
 function restart() {
     location.reload();

@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Playfair+Display&display=swap');
 
-
+body{
+    overflow-x: hidden;
+    padding-right: 0;
+}
 
 /*----------------These are the navbar styles_-------*/
 
@@ -33,7 +36,7 @@
 .full-image {
     height:400px;
     width:100%;
-    overflow: hidden;
+    overflow-x: hidden;
     padding-bottom: inherit;
 }
 
@@ -41,7 +44,9 @@
   
   .full-image {
     height: 200px;
-    padding-right: 0;
+   
+     overflow-x: hidden;
+     
   }
 
   
@@ -69,15 +74,16 @@ footer {
 .header {
      font-family: "Architects Daughter",sans-serif;
     text-align: center;
-    font-size: 50px;
+    font-size: 60px;
     color: #E3B579;
     background-color: #081B19;
+    padding-top: 40px;
 }
 
 .about-text{
     font-family: "Playfair Display",sans-serif;
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     color: #E3B579;
     background-color: #081B19;
 }
@@ -133,6 +139,10 @@ h4 {
   border-radius: 50%;
   margin-top: 10px;
   box-shadow: none;
+    }
+
+    .about-text{
+        font-size: 20px;
     }
 }
 

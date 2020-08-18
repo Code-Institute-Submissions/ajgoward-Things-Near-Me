@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Playfair+Display&display=swap');
 
-#quiz{
-    font-family: "Playfair";
-    padding-left: 50px;
-    color:#E3B579;
-    text-align: center;
-    font-size: 40px;}
+
 
 #after_quiz{
     visibility: hidden;
@@ -16,11 +11,37 @@
      font-size: 40px;
 }
 
+#quiz{
+    text-align: center;
+}
+
+#quizbutton{
+    background-color: #E3B579;
+    font-size: 30px;
+    color: #081B19;
+    font-family: "Architects Daughter",sans-serif;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    transition-duration: 0.2s;
+    
+}
+
+#quizbutton:hover{
+    background-color:  #081B19;
+    color: #E3B579;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 #E3B579;
+}
+
+.multi{
+    color: #E3B579;
+    font-size: 30px;
+    font-family: "Architects Daughter",sans-serif;
+}
+
 img {
     vertical-align: middle;
     border-style: none;
-   
-    padding-bottom: 30px;
+   padding-bottom: 30px;
 }
 
 
@@ -28,4 +49,10 @@ img {
 @media only screen and (max-width: 768px) {
     img { width: 100%;
     height: auto;}
+
+    .multi{
+    font-size: 20px;
+}
+
+
 }
