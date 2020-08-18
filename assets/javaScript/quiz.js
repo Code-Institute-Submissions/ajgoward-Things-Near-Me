@@ -23,61 +23,61 @@ function completeQuiz() {
         total++;
         document.getElementById("RightQ1").innerHTML = (right);
     }
-    else( wrong = document.getElementById("WrongQ1").innerHTML = (wrong))
+    else (wrong = document.getElementById("WrongQ1").innerHTML = (wrong))
 
     if (question2 == "communicate") {
         total++;
         document.getElementById("RightQ2").innerHTML = (right);
     }
-    else( wrong = document.getElementById("WrongQ2").innerHTML = (wrong))
+    else (wrong = document.getElementById("WrongQ2").innerHTML = (wrong))
 
     if (question3 == "Yes") {
         total++;
         document.getElementById("RightQ3").innerHTML = (right);
     }
-     else( wrong = document.getElementById("WrongQ3").innerHTML = (wrong))
+    else (wrong = document.getElementById("WrongQ3").innerHTML = (wrong))
 
     if (question4 == "bored") {
         total++;
         document.getElementById("RightQ4").innerHTML = (right);
     }
-     else( wrong = document.getElementById("WrongQ4").innerHTML = (wrong))
+    else (wrong = document.getElementById("WrongQ4").innerHTML = (wrong))
 
     if (question5 == "corgi") {
         total++;
         document.getElementById("RightQ5").innerHTML = (right);
     }
-     else( wrong = document.getElementById("WrongQ5").innerHTML = (wrong))
+    else (wrong = document.getElementById("WrongQ5").innerHTML = (wrong))
 
     if (question6 == "29") {
         total++;
         document.getElementById("RightQ6").innerHTML = (right);
     }
-     else( wrong = document.getElementById("WrongQ6").innerHTML = (wrong))
+    else (wrong = document.getElementById("WrongQ6").innerHTML = (wrong))
 
-     if (question7 == "chihuahua") {
+    if (question7 == "chihuahua") {
         total++;
         document.getElementById("RightQ7").innerHTML = (right);
     }
-     else( wrong = document.getElementById("WrongQ7").innerHTML = (wrong))
+    else (wrong = document.getElementById("WrongQ7").innerHTML = (wrong))
 
-     if (question8 == "smell") {
+    if (question8 == "smell") {
         total++;
         document.getElementById("RightQ8").innerHTML = (right);
     }
-     else( wrong = document.getElementById("WrongQ8").innerHTML = (wrong))
+    else (wrong = document.getElementById("WrongQ8").innerHTML = (wrong))
 
-     if (question9 == "true") {
+    if (question9 == "true") {
         total++;
         document.getElementById("RightQ9").innerHTML = (right);
     }
-     else( wrong = document.getElementById("WrongQ9").innerHTML = (wrong))
+    else (wrong = document.getElementById("WrongQ9").innerHTML = (wrong))
 
-     if (question10 == "Dog") {
+    if (question10 == "Dog") {
         total++;
         document.getElementById("RightQ10").innerHTML = (right);
     }
-     else( wrong = document.getElementById("WrongQ10").innerHTML = (wrong))
+    else (wrong = document.getElementById("WrongQ10").innerHTML = (wrong))
     /* ----- these are my message and image arrays to use if the user gets a certain number correct ----*/
     var messages = ["Well done", "Middle of the Road", "Do you Even have A Dog?"]
     var gifs = ["assets/images/allcorrect.gif", "assets/images/middle.gif", "assets/images/dognocorrect.gif"]

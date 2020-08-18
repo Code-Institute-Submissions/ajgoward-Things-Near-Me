@@ -15,7 +15,7 @@
     text-align: center;
 }
 
-#quizbutton{
+.quizbutton{
     background-color: #E3B579;
     font-size: 30px;
     color: #081B19;
@@ -26,7 +26,7 @@
     
 }
 
-#quizbutton:hover{
+.quizbutton:hover{
     background-color:  #081B19;
     color: #E3B579;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 #E3B579;

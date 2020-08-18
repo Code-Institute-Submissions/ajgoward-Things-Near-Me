@@ -14,7 +14,11 @@ As  a Dog owner I struggle finding appropiate places that i can take my  dog so 
 website that does just that , in a eye catching a pleasing way.
 
 ## UX
- 
+
+### Wireframes 
+
+For this I used balsamiq please find the pdf in the [Wireframes](Wireframes/Things-Near-Me.pdf)
+
 ### This website is for:
 
 * Dog owners 
@@ -56,12 +60,10 @@ website that does just that , in a eye catching a pleasing way.
 
 *  Like the usual google maps there is a draggable icon near the zoom buttoms which you can drag onto your chosen street to view street view
 
-* Have a dog quiz 
+* Have a dog quiz- If the user is waiting to decide on the business they wish to go there is a fun dog quiz to pass the time
 
-* Have a contact form
-### Wireframes 
+* Have a contact form- If the user does not see there favourite dog friendly business they can contact me 
 
-For this I used balsamiq please find the pdf in the [Wireframes](Wireframes/Things-Near-Me.pdf)
 
 ## Existing Features 
 *	Navigation bar- allows all users to select the content they want to view by simply clicking them , this also collapses into a toggle on mobile devices to maintain space 
@@ -111,20 +113,42 @@ i wish to change at this time.
 i tested each user story as follows:
 *	Learn What the website is about- go to home page , read about.
 
+
+![about](assets/images/about.png)
+
 *	See a location based map that states where they are – go to dog friendly – pop up asking can Things Near Me can access the user location - if clicked yes - the map zooms in on location 
     with a marker stating 'YOU ARE HERE' - if no the map shows no location with the marker stating 
-        'Please use the search bar for your chosen location' :
-        'Error: Your browser doesn\'t support geolocation.'
-    and the autocomplete search bar appears so the user can serach for there location.
+        'Please use the search bar for your chosen location' 
+        and the autocomplete search bar appears so the user can serach for there location.
+
+![map1](assets/images/dogmap.png) ![map2](assets/images/dogmap2.png)
         
 *	To see locations around them on the map marked by markers- once the location is allowed and the map has zoomed in the markers use a animation on drop and drop onto the page
 
+![map1](assets/images/dogmap.png)
+
 *	To see the business details when the marker is clicked - click on the marker – can see business details loaded into a side bar 
+
+![map3](assets/images/dogmap3.png)
 
 *	A website of said business so they can get necessary information - click on marker - go to side bar - can click on a link and is directed to the business website
 
 *	Have street view so they know exactly what the street and business looks like from the from- load the map - go to the draggable person icon - drag the person onto the chosen street - the street will be highlighted to confirm which 
     street the user wants - drop the icon onto the street - street view is loaded with markers on the street view 
+
+![streetview](assets/images/streetview.png)
+
+
+*   Have a dog styled game if they are waiting to decide- Got to Navigation click on quiz the quiz is loaded with ten questions that gives you a score and tells which ones you habe gotten correct.
+
+![quiz](assets/images/quiz1.png)
+
+![quiz](assets/images/quiz2.png)
+
+
+*  Have a contact form- Go to Navagation click contact form is loaded all fields are required and when button is pressed the user gets a success message
+
+![contact](assets/images/contact.png)
 
 *	Do in a time efficient way – everything is set out in headings and sub headings so the user can jump to necessarily information 
 
@@ -188,7 +212,8 @@ When i deployed my project i sent it to freinds and family for feedback as furth
 *	W3schools – for tutorials and code uses -https://www.w3schools.com/ 
 *   W3C CSS - validation of my css - https://jigsaw.w3.org/css-validator/
 *   W3C - validation of my HTML - https://validator.w3.org/
-*  Youtube - for tutorials - https://www.youtube.com/watch?v=C7NsIRhoWuE
+*  Youtube - for tutorials on the quiz. Please notice i watched the tutorial for the main functionality of the quiz but i added my own code and statements onto it 
+- https://www.youtube.com/watch?v=C7NsIRhoWuE
 
 * navbar overide of font family - https://stackoverflow.com/questions/30155699/bootstrap-navbar-font-change-inquiry
 
